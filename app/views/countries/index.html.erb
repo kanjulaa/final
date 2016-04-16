@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1> CRICKETING COUNTRIES   </h1>
+
+<div class="row">
+
+		<% @countries.each do |country| %>
+
+				<a href="/countries/<%= country.id %>">
+					<%= image_tag country.image, class: "country" %>
+				</a>
+
+
+    <% end %>
+	</div>	
+			
+
+<%= link_to 'New Country', new_country_path %>

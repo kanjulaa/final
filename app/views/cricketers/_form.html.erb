@@ -1,0 +1,49 @@
+<%= form_for(@cricketer) do |f| %>
+  <% if @cricketer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cricketer.errors.count, "error") %> prohibited this cricketer from being saved:</h2>
+
+      <ul>
+      <% @cricketer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :fullname %><br>
+    <%= f.text_field :fullname %>
+  </div>
+  
+  
+  <div class="field">
+<%= f.label :country_id %><br>
+<%= f.select :country_id,
+options_for_select(Country.all.collect {|a| ["#{a.name}", a.id]},
+selected: (@cricketer.country ? @cricketer.country.id : Country.first.id)),
+{} %>
+</div>
+  
+  
+  
+  <div class="field">
+    <%= f.label :game %><br>
+    <%= f.number_field :game %>
+  </div>
+  <div class="field">
+    <%= f.label :score %><br>
+    <%= f.number_field :score %>
+  </div>
+  <div class="field">
+    <%= f.label :strength %><br>
+    <%= f.text_field :strength %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

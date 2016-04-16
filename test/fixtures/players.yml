@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  fullname: MyString
+  country: MyString
+  match: 1
+  score: 1
+  strength: 1
+
+two:
+  name: MyString
+  fullname: MyString
+  country: MyString
+  match: 1
+  score: 1
+  strength: 1

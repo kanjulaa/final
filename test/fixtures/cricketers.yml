@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  fullname: MyString
+  game: 1
+  score: 1
+  strength: MyString
+
+two:
+  name: MyString
+  fullname: MyString
+  game: 1
+  score: 1
+  strength: MyString

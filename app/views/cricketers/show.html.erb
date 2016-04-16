@@ -1,0 +1,33 @@
+<%= image_tag @cricketer.strength %>
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cricketer.name %>
+</p>
+
+<p>
+  <strong>Fullname:</strong>
+  <%= @cricketer.fullname %>
+</p>
+
+<p>
+<strong>Country:</strong>
+<%= (@cricketer.country.try(:name) || "NA")%>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @cricketer.game %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @cricketer.score %>
+</p>
+
+
+<%= link_to 'Edit', edit_cricketer_path(@cricketer) %> |
+<%= link_to 'Back', cricketers_path %>
