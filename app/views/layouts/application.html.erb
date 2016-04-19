@@ -10,10 +10,11 @@
   
   <body class="<%= controller.controller_name %>">
 
-
+<%= render 'layouts/navigation' %>
 <div class="container">
-		<%= yield %>
-	</div>	
-	
+<%= yield %>
+</div>
+<%= render 'layouts/footer' %>
+
 </body>
 </html>

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :cricketers
   resources :countries
-  resources :players
-  root 'cricketers#index'
+ # root 'cricketers#index'
+  root 'pages#home'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
